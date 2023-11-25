@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(25, 97%, 53%);
+  --secondary: hsl(0, 0%, 100%);
+  --tertiary: hsl(217, 12%, 63%);
+  --box-bg: hsl(213, 19%, 18%);
+  --website-bg: hsl(216, 12%, 8%);
+  --circle-bg: hsl(217, 14%, 25%);
+}
+
+html {
+  background-color: var(--website-bg);
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+h2,
+.rating--circle:hover.rating__number,
+.attribution {
+  color: var(--secondary);
+}
+
+p,
+.rating__number {
+  color: var(--tertiary);
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+/* ========================================== */
+
+body,
+.box,
+.rating__star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box {
+  max-width: 400px;
+  min-height: 375px;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: var(--box-bg);
+}
+
+.box__rating {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.rating__star {
+  margin-top: 30px;
+}
+
+.rating__number--list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.rating--circle {
+  width: 50px;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 100%;
+  background-color: var(--circle-bg);
+}
+
+.rating--circle:hover.rating__number,
+.rating__submit:hover {
+  cursor: pointer;
+}
+
+.rating--circle:hover.rating__number {
+  background-color: var(--tertiary);
+  transition: all 0.2s ease-out;
+}
+
+.rating--circle:active.rating__number {
+  background-color: var(--primary);
+  transition: all 0.2s ease-in;
+  transform: scale(1.1);
+}
+
+.rating__submit {
+  width: 100%;
+  height: 2.5em;
+  border: none;
+  border-radius: 15px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1rem;
+  color: var(--primary);
+}
+
+/* ========================================== */
+
+.box__submitted {
+  display: none;
+}
+
+/* ========================================== */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.box__submitted--show {
+  display: block;
+}
+
+.rating__box--hide {
+  display: none;
+}
+
+.space--bottom {
+  margin-bottom: 20px;
+}
