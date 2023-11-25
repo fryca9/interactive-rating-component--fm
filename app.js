@@ -16,8 +16,10 @@ function updateRating(selectedButton) {
 }
 
 function updateComponent() {
-  ratingComponent.classList.add("hide");
-  submittedComponent.classList.add("show");
+  if (rating) {
+    ratingComponent.classList.add("hide");
+    submittedComponent.classList.add("show");
+  }
 }
 
 submitBtn.addEventListener("click", updateComponent);
