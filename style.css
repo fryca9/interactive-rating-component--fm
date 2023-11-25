@@ -56,6 +56,7 @@ body,
 
 .box__rating,
 .box__submitted {
+  display: block;
   width: 80%;
   margin: 0 auto;
 }
@@ -86,12 +87,12 @@ body,
   cursor: pointer;
 }
 
-.rating--circle:hover.rating__number {
+.rating--circle:hover.rating__number:not(.selected) {
   background-color: var(--tertiary);
   transition: all 0.2s ease-out;
 }
 
-.rating--circle:active.rating__number {
+.rating--circle:active.rating__number:not(.selected) {
   background-color: var(--primary);
   transition: all 0.2s ease-in;
   transform: scale(1.1);
@@ -141,12 +142,17 @@ body,
   color: hsl(228, 45%, 44%);
 }
 
-.box__submitted--show {
+.show {
   display: block;
 }
 
-.rating__box--hide {
+.hide {
   display: none;
+}
+
+.selected {
+  color: var(--secondary);
+  background-color: var(--primary);
 }
 
 .space--bottom {
