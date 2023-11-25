@@ -107,7 +107,13 @@ body,
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1rem;
+  color: var(--secondary);
+  background-color: var(--primary);
+}
+
+.rating__submit:hover {
   color: var(--primary);
+  background-color: var(--secondary);
 }
 
 /* ========================================== */
