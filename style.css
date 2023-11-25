@@ -54,12 +54,14 @@ body,
   background-color: var(--box-bg);
 }
 
-.box__rating {
+.box__rating,
+.box__submitted {
   width: 80%;
   margin: 0 auto;
 }
 
-.rating__star {
+.rating__star,
+.submitted__img {
   margin-top: 30px;
 }
 
@@ -111,6 +113,20 @@ body,
 
 .box__submitted {
   display: none;
+  text-align: center;
+}
+
+.submitted__score--text {
+  width: fit-content;
+  padding: 10px 15px 5px;
+  margin: 0 auto;
+  border-radius: 20px;
+  color: var(--primary);
+  background-color: var(--circle-bg);
+}
+
+.submitted__title {
+  margin-bottom: 5px;
 }
 
 /* ========================================== */
