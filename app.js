@@ -12,7 +12,7 @@ function updateRating(selectedButton) {
 
   rating = selectedButton.textContent;
   selectedButton.classList.add("selected"); // adding .selected to the selected button
-  score.textContent = rating; // updating .rating__submit button
+  score.textContent = rating; // updating .rating__submit
 }
 
 function updateComponent() {
